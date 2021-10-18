@@ -27,8 +27,8 @@ export const AddPlayer = () => {
 
     return (
         <form onSubmit={handleClick}>
-            <input type="text" onChange={updateRole} value={role} placeholder="Role" />
-            <input type="text" onChange={updateName} value={name} placeholder="Name" />
+            <input type="text" onChange={updateRole} value={role} placeholder="Role" required/>
+            <input type="text" onChange={updateName} value={name} placeholder="Name" required/>
             <button type="submit">Add player</button>
         </form>
     )
