@@ -1,19 +1,23 @@
 import React from 'react'
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { PlayerContext, PlayerProvider } from './PlayersContext';
 
-const PlayersList = ({items}) => {
-
+export const PlayersList = () => {
+    const [players, setPlayers] = useContext(PlayerContext);
     return (
         <div>
-            {items.map((item, index) => (
+            <Link to="/">Home</Link>
+            {players.map((player, index) => (
                 <div>
-                    {item.name && <h1>Player{index} <br /> Name: {item.name}</h1>}
-                    {item.role && <h2>Role: {item.role}</h2>}
+                    {<h1>Player{index+1} <br /> Name: {player.name}</h1>}
+                    {<h2>Role: {player.role}</h2>}
                     <br />
                 </div>
             ))
             }
-        </div>
+         </div>
     )
 }
 
-export default PlayersList;
+
