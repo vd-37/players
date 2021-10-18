@@ -6,11 +6,10 @@ import { PlayersList } from './PlayersList';
 
 const Home = () => {
     return (
-        <PlayerProvider>
+        <div>
             <AddPlayer />
             <Link to="/players">View Players</Link>
-            <PlayersList />
-        </PlayerProvider>
+        </div>
     )
 }
 
